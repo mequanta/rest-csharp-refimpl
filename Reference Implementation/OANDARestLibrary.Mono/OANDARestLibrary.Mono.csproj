@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62A23B34-61C6-4DA0-AC5F-38A7F7833A67}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OANDARestLibrary.Mono</RootNamespace>
+    <AssemblyName>OANDARestLibrary.Mono</AssemblyName>
+    <UseMSBuildEngine>True</UseMSBuildEngine>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.IO.Compression" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Framework\" />
+    <Folder Include="TradeLibrary\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\OANDARestLibrary\Framework\Common.cs">
+      <Link>Framework\Common.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\Framework\CustomEventArgs.cs">
+      <Link>Framework\CustomEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\Framework\ObservableObject.cs">
+      <Link>Framework\ObservableObject.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\EventsSession.cs">
+      <Link>TradeLibrary\EventsSession.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\RatesSession.cs">
+      <Link>TradeLibrary\RatesSession.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\StreamSession.cs">
+      <Link>TradeLibrary\StreamSession.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Account.cs">
+      <Link>TradeLibrary\DataTypes\Account.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\AccountDetails.cs">
+      <Link>TradeLibrary\DataTypes\AccountDetails.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\CalendarEvent.cs">
+      <Link>TradeLibrary\DataTypes\CalendarEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Candle.cs">
+      <Link>TradeLibrary\DataTypes\Candle.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Event.cs">
+      <Link>TradeLibrary\DataTypes\Event.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Heartbeat.cs">
+      <Link>TradeLibrary\DataTypes\Heartbeat.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\IHeartbeat.cs">
+      <Link>TradeLibrary\DataTypes\IHeartbeat.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Instrument.cs">
+      <Link>TradeLibrary\DataTypes\Instrument.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Order.cs">
+      <Link>TradeLibrary\DataTypes\Order.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Position.cs">
+      <Link>TradeLibrary\DataTypes\Position.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Price.cs">
+      <Link>TradeLibrary\DataTypes\Price.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\RateStreamResponse.cs">
+      <Link>TradeLibrary\DataTypes\RateStreamResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Signal.cs">
+      <Link>TradeLibrary\DataTypes\Signal.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\TradeData.cs">
+      <Link>TradeLibrary\DataTypes\TradeData.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Transaction.cs">
+      <Link>TradeLibrary\DataTypes\Transaction.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\AccountResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\AccountResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\AccountsResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\AccountsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\AutochartistResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\AutochartistResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\CandlesResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\CandlesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\CommitmentsOfTradersResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\CommitmentsOfTradersResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\DeletePositionResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\DeletePositionResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\DeleteTradeResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\DeleteTradeResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\HistoricalPositionRatioResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\HistoricalPositionRatioResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\InstrumentsResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\InstrumentsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\OrdersResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\OrdersResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\PositionsResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\PositionsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\PostOrderResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\PostOrderResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\PricesResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\PricesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\Response.cs">
+      <Link>TradeLibrary\DataTypes\Communications\Response.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\SessionResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\SessionResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\SpreadsResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\SpreadsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\TradesResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\TradesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\TransactionsResponse.cs">
+      <Link>TradeLibrary\DataTypes\Communications\TransactionsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\Requests\AccountRequest.cs">
+      <Link>TradeLibrary\DataTypes\Communications\Requests\AccountRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\Requests\CandlesRequest.cs">
+      <Link>TradeLibrary\DataTypes\Communications\Requests\CandlesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\Requests\OrderPostRequest.cs">
+      <Link>TradeLibrary\DataTypes\Communications\Requests\OrderPostRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\Requests\PricePollRequest.cs">
+      <Link>TradeLibrary\DataTypes\Communications\Requests\PricePollRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\TradeLibrary\DataTypes\Communications\Requests\Request.cs">
+      <Link>TradeLibrary\DataTypes\Communications\Requests\Request.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\Credentials.cs">
+      <Link>Credentials.cs</Link>
+    </Compile>
+    <Compile Include="..\OANDARestLibrary\Rest.cs">
+      <Link>Rest.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

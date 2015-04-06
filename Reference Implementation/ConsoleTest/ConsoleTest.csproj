@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OANDARestLibrary\OANDARestLibrary.csproj">
-      <Project>{22f134f0-e5a3-496a-be6b-75680f014388}</Project>
+      <Project>{22F134F0-E5A3-496A-BE6B-75680F014388}</Project>
       <Name>OANDARestLibrary</Name>
     </ProjectReference>
   </ItemGroup>
